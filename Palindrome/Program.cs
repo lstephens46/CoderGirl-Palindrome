@@ -4,17 +4,39 @@ namespace Palindrome
 {
     public static class Program
     {
-        public string word = "";
+       
         public static void Main()
         {
-            IsPalindrome(nemo);
+            Console.Write("Please enter a string that you would like to check for palindrome: ");
+            string word = Console.ReadLine();
+
+            IsPalindrome(word);
             Console.ReadLine();
         }
 
         public static bool IsPalindrome(string word)
-        {
-            char[] tempArray = word.ToCharArray();
+        {   //Create a variable to store the reversed string
+            string reverseString;
+
+
+            //turn word into a char.Array
+            char[] charArray = word.ToCharArray();
+            Array.Reverse(charArray);
+
+
             
+            reverseString = new string(charArray);
+            //Console.WriteLine(charArray);
+            if (word == reverseString)
+            {
+                Console.WriteLine(true);
+                return true;
+            }
+            else if(word != reverseString)
+            {
+                Console.WriteLine(false);
+                return false;
+            }
             
 
             
