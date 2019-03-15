@@ -1,0 +1,4 @@
+The Palindrome assignment is missing some needed details in the instructions. Here they are:
+1. The name of the method you create should be IsPalindrome
+2. The method should take a string as the input.
+3. The method should return a bool - true if the input is a palindrome and false if it is not.
